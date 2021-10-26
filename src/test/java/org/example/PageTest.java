@@ -17,7 +17,9 @@ public abstract class PageTest {
 
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 
-        System.setProperty("webdriver.chrome.driver","C:/Selenium/ChromeDriver");
+        //C:\Users\Win10\Desktop\WorkCase\directory\ChromeDriver\bin\chromedriver.exe
+        //"webdriver.chrome.driver","C:/Selenium/ChromeDriver/bin"
+        System.setProperty("webdriver.chrome.driver","C:/Users/Win10/Desktop/WorkCase/directory/ChromeDriver/bin/chromedriver.exe");
         driver = new ChromeDriver();
 
         driver.manage().window().maximize();
