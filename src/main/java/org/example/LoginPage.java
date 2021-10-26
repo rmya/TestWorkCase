@@ -23,16 +23,16 @@ public class LoginPage {
         webDriver.get("https://www.lcwaikiki.com/tr-TR/TR");
         Assert.assertEquals("LC Waikiki | ilk Alışverişte Kargo Bedava! - LC Waikiki", webDriver.getTitle());
 
-        webDriverWait.until(ExpectedConditions.elementToBeClickable(By.className("action-btn btn-block bg-blue"))).click();
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(By.className("dropdown-toggle"))).click();
         Assert.assertEquals("Giriş Yap",webDriver.getTitle());
 
-        webDriver.findElement(By.id("")).clear();
-        webDriver.findElement(By.id("")).sendKeys(username);
+        webDriver.findElement(By.id("LoginEmail")).clear();
+        webDriver.findElement(By.id("LoginEmail")).sendKeys(username);
 
-        webDriver.findElement(By.id("")).clear();
-        webDriver.findElement(By.id("")).sendKeys(password);
+        webDriver.findElement(By.id("Password")).clear();
+        webDriver.findElement(By.id("Password")).sendKeys(password);
 
-        webDriver.get("https://www.lcwaikiki.com/tr-TR/TR");
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(By.id("loginLink"))).click();
         Assert.assertEquals("LC Waikiki | ilk Alışverişte Kargo Bedava! - LC Waikiki", webDriver.getTitle());
 
     }
