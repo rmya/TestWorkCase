@@ -12,3 +12,6 @@
 | Ürün sayfasındaki fiyat ile sepet fiyatını karşılaştır | Fiyatlar eşit mi? |
 |Ürün adedini arttır 2 yap | Sepette 2 ürün olduğunu doğrula |
 | Ürünü sepetten sil | Sepetin boş olduğunu kontrol et. |
+
+
+*  Test etmeden önce  src/main/java/org/example/pages/LoginPage.java içerisinde sendEmail() ve sendPassword() parametreleri değiştirilmelidir ! 

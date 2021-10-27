@@ -15,11 +15,11 @@ public class LoginPage extends BasePage {
     }
 
     public  void  sendEmail(){
-        sendKeys(EMAIL_AREA_LOCATOR,"rumeysa.tan2@gmail.com");
+        sendKeys(EMAIL_AREA_LOCATOR,"*********@****.com");
     }
 
     public void sendPassword(){
-        sendKeys(PASSWORD_AREA_LOCATOR,"rtrtrt1");
+        sendKeys(PASSWORD_AREA_LOCATOR,"********");
     }
 
     public void LoginButton(){
