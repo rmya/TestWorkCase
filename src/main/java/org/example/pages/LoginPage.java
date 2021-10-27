@@ -19,7 +19,7 @@ public class LoginPage extends BasePage {
     }
 
     public void sendPassword(){
-        sendKeys(PASSWORD_AREA,"r147852369");
+        sendKeys(PASSWORD_AREA,"rtrtrt1");
     }
 
     public void LoginButton(){

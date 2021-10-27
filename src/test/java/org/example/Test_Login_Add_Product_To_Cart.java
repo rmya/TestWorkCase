@@ -26,6 +26,7 @@ public class Test_Login_Add_Product_To_Cart extends BaseTest{
     @Test
     @Order(2)
     public void login_requirements(){
+        loginPage = new LoginPage(driver);
         loginPage.sendEmail();
         loginPage.sendPassword();
         loginPage.LoginButton();
@@ -40,7 +41,6 @@ public class Test_Login_Add_Product_To_Cart extends BaseTest{
         homePage.searchBox().search("pantolan");
         Assertions.assertTrue(productsPage.isOnProductPage(),
                 "Not on products page!");
-
     }
 
     @Test
@@ -67,7 +67,6 @@ public class Test_Login_Add_Product_To_Cart extends BaseTest{
         homePage.goToCart();
         Assertions.assertTrue(cartPage.checkIfProductAdded(),
                 "Product was not added to cart");
-
     }
 
 }

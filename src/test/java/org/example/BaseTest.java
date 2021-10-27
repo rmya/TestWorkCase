@@ -1,5 +1,6 @@
 package org.example;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,8 @@ public class BaseTest {
     @BeforeAll
     private void setUp(){
 
-        System.setProperty("webdriver.chrome.driver","C:/Users/Win10/Desktop/WorkCase/directory/ChromeDriver/bin/chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
+        //System.setProperty("driver.chrome.driver","C:/Users/Win10/Desktop/WorkCase/directory/ChromeDriver/bin/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.lcwaikiki.com/tr-TR/TR");
         driver.manage().window().maximize();
