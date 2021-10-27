@@ -10,9 +10,8 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
-    public LoginPage clickLogIn(){
-        click(CLICK_LOG_IN );
-        return this;
+    public boolean isOnLoginPage() {
+        return isDisplayed(UYE_TITLE);
     }
 
     public  LoginPage sendEmail(){
