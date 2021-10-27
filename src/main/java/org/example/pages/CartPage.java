@@ -9,6 +9,8 @@ import static org.example.constants.*;
 
 public class CartPage extends BasePage {
 
+    public WebDriver driver;
+
     protected int cartProductSize;
 
     public CartPage(WebDriver driver) {

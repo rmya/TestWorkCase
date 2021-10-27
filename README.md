@@ -1,4 +1,4 @@
-## Test Steps
+## Selenium Web Otomasyon
 
 |   Test Steps      |    Assertions     |
 | ------------------| ------------------|

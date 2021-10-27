@@ -10,6 +10,7 @@ import static org.example.constants.*;
 
 public class ProductsPage extends BasePage {
 
+    public  WebDriver driver;
 
     public ProductsPage(WebDriver driver) {
         super(driver);

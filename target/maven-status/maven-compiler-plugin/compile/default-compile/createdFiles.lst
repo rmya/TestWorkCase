@@ -1,10 +1,9 @@
 org\example\pages\ProductsPage.class
 org\example\pages\BasePage.class
 org\example\pages\SearchBox.class
-org\example\constants\ConstantsLoginPage.class
 org\example\pages\LoginPage.class
 org\example\pages\HomePage.class
+org\example\constants.class
 org\example\logger\Log.class
 org\example\pages\CartPage.class
 org\example\pages\ProductDetailPage.class
-org\example\constants\ConstantsAddProductToCart.class
