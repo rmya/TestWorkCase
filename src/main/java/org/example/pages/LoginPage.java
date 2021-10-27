@@ -1,6 +1,5 @@
-package org.example.page;
+package org.example.pages;
 
-import org.example.base.BasePage;
 import org.openqa.selenium.WebDriver;
 
 import static org.example.constants.ConstantsLoginPage.*;
@@ -31,15 +30,6 @@ public class LoginPage extends BasePage {
         return this;
     }
 
-    public LoginPage seaarch(){
-        sendKeys(SEARCH_AREA,"pantolan");
-        return this;
-    }
-
-    public LoginPage searhButton(){
-        click(CLICK_BUTTON_SEARCH);
-        return this;
-    }
 
 
 }
