@@ -4,7 +4,6 @@ import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 
-
 public class Test_Login_Add_Product_To_Cart extends BaseTest{
 
     HomePage homePage;

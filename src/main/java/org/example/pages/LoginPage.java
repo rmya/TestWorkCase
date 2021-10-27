@@ -14,19 +14,16 @@ public class LoginPage extends BasePage {
         return isDisplayed(UYE_TITLE);
     }
 
-    public  LoginPage sendEmail(){
+    public  void  sendEmail(){
         sendKeys(EMAIL_AREA,"rumeysa.tan2@gmail.com");
-        return this;
     }
 
-    public LoginPage sendPassword(){
+    public void sendPassword(){
         sendKeys(PASSWORD_AREA,"r147852369");
-        return this;
     }
 
-    public LoginPage LoginButton(){
+    public void LoginButton(){
         click(CLICK_BUTTON_LOGIN);
-        return this;
     }
 
 
