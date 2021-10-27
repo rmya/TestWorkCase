@@ -1,8 +1,5 @@
 package org.example;
-import org.example.pages.CartPage;
-import org.example.pages.HomePage;
-import org.example.pages.ProductDetailPage;
-import org.example.pages.ProductsPage;
+import org.example.pages.*;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
@@ -11,15 +8,35 @@ import org.junit.jupiter.api.Order;
 public class Test_Add_Product_To_Cart extends BaseTest{
 
     HomePage homePage;
+    LoginPage loginPage;
     ProductsPage productsPage;
     ProductDetailPage productDetailPage;
     CartPage cartPage;
 
     @Test
-    @Order(5)
-    public void search_a_product(){
+    @Order(1)
+    public void login(){
         homePage = new HomePage(driver);
+        loginPage = new LoginPage(driver);
         homePage.acceptCookies();
+        homePage.clickLogIn();
+        Assertions.assertTrue(loginPage.isOnLoginPage(),
+                "Not on login page!");
+    }
+
+    @Test
+    @Order(2)
+    public void login_requirements(){
+        loginPage.sendEmail();
+        loginPage.sendPassword();
+        loginPage.LoginButton();
+        Assertions.assertTrue(homePage.isOnHomePage_withLogin(),
+                "Login Failed!");
+    }
+
+    @Test
+    @Order(3)
+    public void search_a_product(){
         productsPage = new ProductsPage(driver);
         homePage.searchBox().search("pantolan");
         Assertions.assertTrue(productsPage.isOnProductPage(),
@@ -28,7 +45,7 @@ public class Test_Add_Product_To_Cart extends BaseTest{
     }
 
     @Test
-    @Order(6)
+    @Order(4)
     public void select_a_product(){
         productDetailPage = new ProductDetailPage(driver);
             productsPage.selectProduct(1);
@@ -37,7 +54,7 @@ public class Test_Add_Product_To_Cart extends BaseTest{
     }
 
     @Test
-    @Order(7)
+    @Order(5)
     public void add_product_to_cart(){
             productDetailPage.addToCart();
             Assertions.assertTrue(homePage.isProductCountUp(),
@@ -45,7 +62,7 @@ public class Test_Add_Product_To_Cart extends BaseTest{
     }
 
     @Test
-    @Order(8)
+    @Order(6)
     public void go_to_cart(){
         cartPage = new CartPage(driver);
         homePage.goToCart();
