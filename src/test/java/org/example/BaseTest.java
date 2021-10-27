@@ -17,7 +17,6 @@ public class BaseTest {
     private void setUp(){
 
         WebDriverManager.chromedriver().setup();
-        //System.setProperty("driver.chrome.driver","C:/Users/Win10/Desktop/WorkCase/directory/ChromeDriver/bin/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.lcwaikiki.com/tr-TR/TR");
         driver.manage().window().maximize();
@@ -30,3 +29,6 @@ public class BaseTest {
     }
 
 }
+
+
+// //System.setProperty("driver.chrome.driver","C:/Users/Win10/Desktop/WorkCase/directory/ChromeDriver/bin/chromedriver.exe");

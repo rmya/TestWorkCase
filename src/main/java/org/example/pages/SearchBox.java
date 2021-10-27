@@ -2,8 +2,8 @@ package org.example.pages;
 
 import org.openqa.selenium.WebDriver;
 
-import static org.example.constants.ConstantsAddProductToCart.SEARCH_BOX_LOCATOR;
-import static org.example.constants.ConstantsAddProductToCart.SEARCH_BUTTON_LOCATOR;
+import static org.example.constants.SEARCH_BOX_LOCATOR;
+import static org.example.constants.SEARCH_BUTTON_LOCATOR;
 
 public class SearchBox extends BasePage {
 

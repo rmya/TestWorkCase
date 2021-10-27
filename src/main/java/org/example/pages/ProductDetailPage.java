@@ -1,12 +1,12 @@
 package org.example.pages;
 
 import org.openqa.selenium.WebDriver;
-import static org.example.constants.ConstantsAddProductToCart.ADD_TO_CART_BUTTON_LOCATOR;
+
+import static org.example.constants.ADD_TO_CART_BUTTON_LOCATOR;
 
 public class ProductDetailPage extends BasePage {
 
-    //TODO Detay sayfasında olduğumuzu test etmek için detay sayfasına özel SepereEkle butonu varlığı ile kontrol etmeyi düşündüm.
-
+    //T Detay sayfasında olduğumuzu test etmek için detay sayfasına özel SepereEkle butonu varlığı ile kontrol etmeyi düşündüm.
 
     public ProductDetailPage(WebDriver driver) {
         super(driver);

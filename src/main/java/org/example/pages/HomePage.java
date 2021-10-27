@@ -2,9 +2,7 @@ package org.example.pages;
 
 import org.openqa.selenium.WebDriver;
 
-import static org.example.constants.ConstantsAddProductToCart.*;
-import static org.example.constants.ConstantsLoginPage.CLICK_LOG_IN;
-import static org.example.constants.ConstantsLoginPage.HESABIM_LABEL;
+import static org.example.constants.*;
 
 public class HomePage extends BasePage {
 
@@ -39,10 +37,10 @@ public class HomePage extends BasePage {
     }
 
     public void clickLogIn() {
-        click(CLICK_LOG_IN);
+        click(CLICK_LOG_IN_LOCATOR);
     }
 
     public boolean isOnHomePage_withLogin() {
-        return isDisplayed(HESABIM_LABEL);
+        return isDisplayed(HESABIM_LABEL_LOCATOR);
     }
 }

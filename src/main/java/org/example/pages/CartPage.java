@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-import static org.example.constants.ConstantsAddProductToCart.CART_PRODUCT_LOCATOR;
+import static org.example.constants.*;
 
 public class CartPage extends BasePage {
 
@@ -14,6 +14,8 @@ public class CartPage extends BasePage {
     public CartPage(WebDriver driver) {
         super(driver);
     }
+
+    //TODO : ürün sepete eklenmeden önce beden seçimi kısmı eksik.
 
     public boolean checkIfProductAdded() {
         cartProductSize = getCartProducts().size();
@@ -25,4 +27,20 @@ public class CartPage extends BasePage {
     }
 
 
+    public void deleteProduct() {
+        click(CART_FIST_REMOVE_BUTTON);
+        click(CART_POPUP_REMOVE_BUTTON);
+    }
+
+    public boolean checkIfProductRemoved() {
+        return isDisplayed(CART_PRODUCT_IS_REMOVED_LOCATOR);
+    }
+
+    public void contolCartProduct() {
+        find(CART_PAYMENT_STEP_BOTTON);
+    }
+
+    public boolean isCartEmpty() {
+        return isDisplayed(CART_EMPTY_TITLE_LOCATOR);
+    }
 }

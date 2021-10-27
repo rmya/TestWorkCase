@@ -45,6 +45,22 @@ public class Test_Login_Add_Product_To_Cart extends BaseTest{
 
     @Test
     @Order(4)
+    public void scrollToProductPage(){
+        productsPage.scrollToProductPage();
+        Assertions.assertTrue(productsPage.isOnScrollingPage(),
+                "Scroll operation failed");
+    }
+
+    @Test
+    @Order(5)
+    public void seeMoreProduct(){
+        productsPage.moreProduct();
+        Assertions.assertTrue(productsPage.isClickedMoreProduct(),
+                "No more products displayed");
+    }
+
+    @Test
+    @Order(6)
     public void select_a_product(){
         productDetailPage = new ProductDetailPage(driver);
             productsPage.selectProduct(1);
@@ -53,7 +69,7 @@ public class Test_Login_Add_Product_To_Cart extends BaseTest{
     }
 
     @Test
-    @Order(5)
+    @Order(7)
     public void add_product_to_cart(){
             productDetailPage.addToCart();
             Assertions.assertTrue(homePage.isProductCountUp(),
@@ -61,12 +77,36 @@ public class Test_Login_Add_Product_To_Cart extends BaseTest{
     }
 
     @Test
-    @Order(6)
+    @Order(8)
     public void go_to_cart(){
         cartPage = new CartPage(driver);
         homePage.goToCart();
         Assertions.assertTrue(cartPage.checkIfProductAdded(),
                 "Product was not added to cart");
+    }
+
+    @Test
+    @Order(9)
+    public void controlPrice(){
+        productsPage.controlProductPrice();
+        Assertions.assertTrue(productsPage.checkPriceIsEqual(),
+                "Prices on cart and product page are not equal");
+    }
+
+    @Test
+    @Order(10)
+    public void deleteProduct(){
+        cartPage.deleteProduct();
+        Assertions.assertTrue(cartPage.checkIfProductRemoved(),
+                "The product could not be deleted from the cart");
+    }
+
+    @Test
+    @Order(11)
+    public void contolCartProduct(){
+        cartPage.contolCartProduct();
+        Assertions.assertTrue(cartPage.isCartEmpty(),
+                "Not all items have been deleted from the cart.");
     }
 
 }
